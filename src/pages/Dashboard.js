@@ -1,11 +1,15 @@
 import React from "react"
+import Header from "./Components/PortalHeader"
+import "../pages css/dashboard.css"
 
 function Dashboard(){
 
     return(
-        <main>
-            <p>Is this working</p>
-        </main>
+        <div>
+            <Header />
+            <nav></nav>
+            <main></main>
+        </div>
     )
 }
 

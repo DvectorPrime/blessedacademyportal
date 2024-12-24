@@ -13,9 +13,6 @@ function Login(){
                     <p>Essential school records in one place!</p>
                 </div>
             </section>
-            {/* <div className="small-screen-logo-container">
-                <img alt="Blessed Heritage Academy" src={SchoolLogo} className="small-screen-login-logo"/>
-            </div> */}
             <section className="login-container">
             <div className="small-screen-logo-container">
                 <img alt="Blessed Heritage Academy" src={SchoolLogo} className="small-screen-login-logo"/>
