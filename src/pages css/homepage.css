@@ -1,0 +1,82 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+  
+html{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 16px;
+}
+  
+:root{
+    --logo-blue: #0f2753;
+    --blue: #1975b4;
+    --white: #ffffff;
+    --bali-hei: #7e8eae;
+    --black: #0b1420;
+}
+
+
+#hp-header{
+  height: fit-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  background-color: var(--black);
+  overflow-y: hidden;
+}
+
+.homepage-head{
+  margin: 15px 20px;
+  color: white;
+}
+
+#homepage-nav{
+  list-style-type: none;
+}
+
+#homepage-nav li{
+  display: inline;
+}
+
+#homepage-nav a{
+  padding: 25px 20px;
+  letter-spacing: 1.5px;
+  color: white;
+  font-weight: bold;
+  user-select: none;
+  text-decoration: none;
+}
+
+#homepage-nav a:hover{
+  cursor: pointer;
+  background-color: var(--blue);
+}
+
+.homepage-main{
+  background: url("../resources/homepage-background-image.png");
+  background-color: #ffffff80;
+  background-blend-mode: overlay;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.homepage-logo{
+  display: block;
+  margin: -70px auto -100px auto;
+  width: 500px;
+}
+
+.homepage-main h1{
+  text-align: center;
+  color: var(--logo-blue)
+}
+
+.homepage-main .mission{
+  text-align: center;
+  color: var(--white);
+} 

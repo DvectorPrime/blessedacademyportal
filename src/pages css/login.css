@@ -17,66 +17,6 @@ html{
   --black: #0b1420;
 }
 
-/* #hp-header{
-  height: fit-content;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  position: sticky;
-  top: 0;
-  background-color: var(--black);
-  overflow-y: hidden;
-}
-
-.homepage-head{
-  margin: 15px 20px;
-  color: white;
-}
-
-#homepage-nav{
-  list-style-type: none;
-}
-
-
-#homepage-nav li{
-  display: inline;
-  padding: 25px 20px;
-  letter-spacing: 1.5px;
-  color: white;
-  font-weight: bold;
-  user-select: none;
-}
-
-#homepage-nav li:hover{
-  cursor: pointer;
-  background-color: var(--blue);
-}
-
-.homepage-main{
-  background: url("./resources/homepage-background-image.png");
-  background-color: #ffffff80;
-  background-blend-mode: overlay;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.homepage-logo{
-  display: block;
-  margin: -70px auto -100px auto;
-  width: 500px;
-}
-
-.homepage-main h1{
-  text-align: center;
-  color: var(--logo-blue)
-}
-
-.homepage-main .mission{
-  text-align: center;
-  color: var(--white);
-} */
-
 .login-page{
   width: 100%;
   height: 100vh;
@@ -249,7 +189,7 @@ button:hover{
   }
 }
 
-@media only screen and (max-width: 500px){
+@media only screen and (max-width: 600px){
   .login-page{
     padding-top: 100px;
   }
