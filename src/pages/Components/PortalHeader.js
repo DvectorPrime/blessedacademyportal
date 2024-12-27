@@ -12,7 +12,7 @@ function Header(){
         <header className="dashboard-heading">
             <div className="school-name-container">
                 <img src={Logo} alt="" />
-                <h1>Blessed Heritage Academy Portal</h1>
+                <h1>Blessed's Heritage Academy Portal</h1>
             </div>
             <div className="dashboard-dropdown">
                 <button className="profile-dropdown-button">

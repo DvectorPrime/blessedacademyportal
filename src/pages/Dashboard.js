@@ -1,6 +1,7 @@
 import React from "react"
 import Header from "./Components/PortalHeader"
 import Navbar from "./Components/Navbar"
+import DBHome from "./Components/DBHomepage"
 import "../pages css/dashboard.css"
 
 function Dashboard(){
@@ -9,7 +10,7 @@ function Dashboard(){
         <div className="dashboard-container">
             <Header />
             <Navbar />
-            <main></main>
+            <DBHome />
         </div>
     )
 }

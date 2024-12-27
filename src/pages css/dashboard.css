@@ -34,7 +34,8 @@ html{
     justify-content: space-between;
     align-items: center;
     grid-column: 1/-1;
-    box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2)
+    box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2);
+    z-index: 3;
 }
 
 .dashboard-heading .school-name-container{
@@ -111,10 +112,10 @@ html{
 }
 
 /*Navbar Design*/
-
 .navigation-bar{
     min-height: 100vh;
     background-color: var(--bali-hei);
+    z-index: 2;
 }
 
 .nav-item, .menu-button{
@@ -140,16 +141,90 @@ html{
 
 .nav-icon{
     width: 20px;
-    
 }
 
 .menu-button{
     display: none !important;
 }
 
-@media only screen and (max-width: 992px){
+/* The dashboard main content's design */
+
+.dashboard-welcome{
+    background-color: var(--blue);
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 11px 20px;
+}
+
+.default-main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 20px 30px;
+    gap: 20px;
+}
+
+.default-main .home-tab{
+    position: relative;
+    min-width: 200px;
+    min-height: 150px;
+    border: none;
+    background-color: var(--black);
+    box-shadow: 3px 3px #0000006c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s linear;
+}
+
+.default-main .home-tab:hover{
+    top: 3px;
+    left: 3px;
+    box-shadow: none;
+}
+
+.default-main .home-tab:focus{
+    outline: none;
+    top: 3px;
+    left: 3px;
+    box-shadow: none;
+}
+
+.default-main .tab-image{
+    width: 80px;
+}
+
+.tab-text{
+    display: block;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    text-align: left;
+    font-size: 18px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    letter-spacing: 0.5px; 
+}
+
+@media only screen and (max-width: 900px){
     .dashboard-heading .school-name-container h1{
         display: none;
+    }
+
+    .default-main{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .default-main .home-tab{
+        min-width: 150px;
+    }
+
+    .default-main .tab-image{
+        width: 60px;
+    }
+    
+    .tab-text{
+        font-size: 16px;
     }
 }
 
@@ -171,5 +246,17 @@ html{
         display: block !important;
         background-color: transparent;
         border: none;
+    }
+
+    .default-main{
+        grid-template-columns: 1fr;
+    }
+
+    .default-main .home-tab{
+        min-width: 200px;
+    }
+    
+    .tab-text{
+        font-size: 16px;
     }
 }

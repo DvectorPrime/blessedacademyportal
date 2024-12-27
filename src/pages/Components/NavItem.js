@@ -1,6 +1,7 @@
 import React from "react"
+import { Link } from "react-router-dom";
 
-function NavItem({name, icon, isActive, lengthen, setLengthen}){
+function NavItem({name, icon, isActive, lengthen, setLengthen, link}){
     const active = isActive ? "nav-active" : ""
 
     const textStyle = window.innerWidth <= 600 ? {display : lengthen ? "block": "none"} : {}
@@ -13,7 +14,10 @@ function NavItem({name, icon, isActive, lengthen, setLengthen}){
     }
 
     return(
-        <a onClick={handleClick} className={`nav-item ${active}`} href="#" style={navStyle}><img className="nav-icon" src={icon} alt="" /> <span style={textStyle}>{name}</span></a>
+        <Link onClick={handleClick} className={`nav-item ${active}`} to={link} style={navStyle}>
+            <img className="nav-icon" src={icon} alt="" /> 
+            <span style={textStyle}>{name}</span>
+        </Link>
     )
 }
 
