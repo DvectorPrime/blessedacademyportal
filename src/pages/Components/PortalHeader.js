@@ -1,12 +1,23 @@
-import React from "react"
+import React, {useContext} from "react"
+import { useNavigate } from "react-router-dom"
 import Logo from "../../resources/CroppedLogo.png"
 import ProfileAvatar from "../../resources/profile-avatar.svg"
 import ArrowDown from "../../resources/arrow-down.svg"
 import Person from "../../resources/person-avatar.svg"
 import ChangePassword from "../../resources/change-icon.svg"
 import LogOut from "../../resources/logout-icon.svg"
+import { UserContext } from "../Contexts/LoginUserContext"
 
 function Header(){
+
+    const {setCurrentUser} = useContext(UserContext)
+
+    const navigate = useNavigate();
+
+    function logOut(){
+        setCurrentUser("");
+        navigate("/")
+    }
 
     return(
         <header className="dashboard-heading">
@@ -23,7 +34,7 @@ function Header(){
                 <div class="dropdown-content">
                     <a className="dropdown-item" href="#"><img src={Person} alt="" /> <span>My Profile</span></a>
                     <a className="dropdown-item" href="#"><img src={ChangePassword} alt="" /> <span>Change Password</span></a>
-                    <a className="dropdown-item hor-line" href="#"><img src={LogOut} alt="" /> <span>Log Out</span></a>
+                    <button className="dropdown-item hor-line" onClick={logOut}><img src={LogOut} alt="" /> <span>Log Out</span></button>
                 </div>
             </div>
         </header>

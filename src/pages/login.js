@@ -12,7 +12,7 @@ function Login(){
     
     const navigate = useNavigate();
 
-    const {setUser} = useContext(UserContext)
+    const {setCurrentUser} = useContext(UserContext)
 
     async function signInUser(formData){
         const studentId = formData.get("student-id") || " "
@@ -24,7 +24,7 @@ function Login(){
         if(studentInfo.exists()){
             if (enteredPassword === studentInfo.data().password){
                 navigate("/dashboard")
-                setUser(studentId)
+                setCurrentUser(studentId)
                 setIsWrong(false)
             } 
         } else{
@@ -54,7 +54,7 @@ function Login(){
                     <label htmlFor="student-password">PASSWORD</label>
                     <input type="password" id="student-password" name="student-password" placeholder="Enter Password" />
                     <div className="login-bottom">
-                        <button id="portal-login-btn" >Login</button>
+                        <button id="portal-login-btn" type="submit">Login</button>
                         <span>Forgot Password?</span>
                     </div>
                 </form>

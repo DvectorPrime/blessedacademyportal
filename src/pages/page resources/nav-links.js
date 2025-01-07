@@ -7,7 +7,6 @@ import announcmentIcon from "../../resources/announcement-icon.svg"
 import bookIcon from "../../resources/digital-resources-icon.svg"
 import schoolCalendarIcon from "../../resources/school-calendar-icon.svg" 
 import complaintIcon from "../../resources/complaint-icon.svg"
-import logOutIcon from "../../resources/logout-icon.svg"
 import profileIconx from "../../resources/nav-profile-2.svg"
 import paymentIconx from "../../resources/payment-icon-2.svg"
 import assignmentIconx from "../../resources/assignment-icon-2.svg"
@@ -62,11 +61,6 @@ export const navItems = [
             name: "Complaints / Suggestions",
             icon: complaintIcon,
             link: "/dashboard/complaints-suggestions"
-        },
-        {
-            name: "Logout",
-            icon: logOutIcon,
-            link: "/login"
         },
 ]
 
