@@ -1,5 +1,5 @@
 import React, {useContext} from "react"
-import { useNavigate } from "react-router-dom"
+import { useNavigate, Link } from "react-router-dom"
 import Logo from "../../resources/CroppedLogo.png"
 import ProfileAvatar from "../../resources/profile-avatar.svg"
 import ArrowDown from "../../resources/arrow-down.svg"
@@ -32,7 +32,7 @@ function Header(){
                     <img src={ArrowDown} alt="Profile DropDown" />
                 </button>
                 <div class="dropdown-content">
-                    <a className="dropdown-item" href="#"><img src={Person} alt="" /> <span>My Profile</span></a>
+                    <Link className="dropdown-item" to="/dashboard/profile"><img src={Person} alt="" /> <span>My Profile</span></Link>
                     <a className="dropdown-item" href="#"><img src={ChangePassword} alt="" /> <span>Change Password</span></a>
                     <button className="dropdown-item hor-line" onClick={logOut}><img src={LogOut} alt="" /> <span>Log Out</span></button>
                 </div>

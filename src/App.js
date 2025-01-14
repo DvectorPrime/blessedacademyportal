@@ -5,6 +5,7 @@ import Login from "./pages/login"
 import Dashboard from "./pages/Dashboard";
 import ErrorPage from "./pages/ErrorPage";
 import { UserProvider } from "./pages/Contexts/LoginUserContext";
+import Profile from "./pages/Profile";
 
 const router = createBrowserRouter([
   // {
@@ -19,7 +20,13 @@ const router = createBrowserRouter([
   },
   {
     path: "/dashboard",
-    element: <Dashboard />
+    element: <Dashboard />,
+    children: [
+      {
+        path: "/dashboard/profile",
+        element: <Profile />
+      }
+    ]
   }
 ])
 
