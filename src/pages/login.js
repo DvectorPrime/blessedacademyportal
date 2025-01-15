@@ -24,8 +24,10 @@ function Login(){
         if(studentInfo.exists()){
             if (enteredPassword === studentInfo.data().password){
                 navigate("/dashboard")
-                setCurrentUser(studentInfo.data())
+                setCurrentUser({studentId: studentId, ...studentInfo.data()})
                 setIsWrong(false)
+            } else {
+                setIsWrong(true)
             } 
         } else{
             setIsWrong(true)
