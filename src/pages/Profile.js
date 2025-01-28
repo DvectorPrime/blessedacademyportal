@@ -32,13 +32,7 @@ function Profile(){
     }
 
     useEffect(() => {
-        if (!currentUser){
-            navigate("/")
-            return
-        }
-
         getStudentProfileDetials();
-
     }, [currentUser])
 
     return(

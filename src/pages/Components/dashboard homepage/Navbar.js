@@ -1,10 +1,10 @@
 import React, { useState, useContext } from "react"
 import { useNavigate } from "react-router-dom"
 import NavItem from "./NavItem"
-import { navItems } from "../page resources/nav-links"
-import menuIcon from "../../resources/menu-icon.svg"
-import logOutIcon from "../../resources/logout-icon.svg"
-import { UserContext } from "../Contexts/LoginUserContext"
+import { navItems } from "../../page resources/nav-links"
+import menuIcon from "../../../resources/menu-icon.svg"
+import logOutIcon from "../../../resources/logout-icon.svg"
+import { UserContext } from "../../Contexts/LoginUserContext"
 
 function Navbar(){
     const [lengthen, setLengthen] = useState(false)
@@ -30,7 +30,6 @@ function Navbar(){
             name={name} 
             icon={icon} 
             link={link}
-            isActive={name === "Home"} 
             lengthen={lengthen} 
             setLengthen={setLengthen} />)
 

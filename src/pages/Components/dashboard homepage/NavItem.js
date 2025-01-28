@@ -1,8 +1,10 @@
 import React from "react"
+import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 
-function NavItem({name, icon, isActive, lengthen, setLengthen, link}){
-    const active = isActive ? "nav-active" : ""
+function NavItem({name, icon, lengthen, setLengthen, link}){
+    const location = useLocation()
+    const active = location.pathname === link ? "nav-active" : ""
 
     const textStyle = window.innerWidth <= 600 ? {display : lengthen ? "block": "none"} : {}
     const navStyle = window.innerWidth <= 600 ? {

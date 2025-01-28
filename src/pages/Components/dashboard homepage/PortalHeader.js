@@ -1,12 +1,12 @@
 import React, {useContext} from "react"
 import { useNavigate, Link } from "react-router-dom"
-import Logo from "../../resources/CroppedLogo.png"
-import ProfileAvatar from "../../resources/profile-avatar.svg"
-import ArrowDown from "../../resources/arrow-down.svg"
-import Person from "../../resources/person-avatar.svg"
-import ChangePassword from "../../resources/change-icon.svg"
-import LogOut from "../../resources/logout-icon.svg"
-import { UserContext } from "../Contexts/LoginUserContext"
+import Logo from "../../../resources/CroppedLogo.png"
+import ProfileAvatar from "../../../resources/profile-avatar.svg"
+import ArrowDown from "../../../resources/arrow-down.svg"
+import Person from "../../../resources/person-avatar.svg"
+import ChangePassword from "../../../resources/change-icon.svg"
+import LogOut from "../../../resources/logout-icon.svg"
+import { UserContext } from "../../Contexts/LoginUserContext"
 
 function Header(){
 

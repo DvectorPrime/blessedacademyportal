@@ -1,9 +1,7 @@
-import React, {useState, useContext, useEffect} from "react";
-import { doc, getDoc } from "firebase/firestore";
-import { db } from "../../config/firebase";
-import { UserContext } from "../Contexts/LoginUserContext";
+import React, {useContext, useEffect} from "react";
+import { UserContext } from "../../Contexts/LoginUserContext";
 import { useNavigate } from "react-router-dom";
-import { tabItems } from "../page resources/nav-links";
+import { tabItems } from "../../page resources/nav-links";
 
 function DBHome(){
 
